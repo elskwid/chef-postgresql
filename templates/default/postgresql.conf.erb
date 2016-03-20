@@ -209,9 +209,6 @@ commit_delay = <%= node["postgresql"]["commit_delay"] %>     # range 0-100000, i
 
 # - Checkpoints -
 
-<%- if node["postgresql"]["checkpoint_segments"] %>
-checkpoint_segments = <%= node["postgresql"]["checkpoint_segments"] %>    # in logfile segments, min 1, 16MB each
-<%- end %>
 <%- if node["postgresql"]["checkpoint_timeout"] %>
 checkpoint_timeout = <%= node["postgresql"]["checkpoint_timeout"] %>    # range 30s-1h
 <%- end %>
